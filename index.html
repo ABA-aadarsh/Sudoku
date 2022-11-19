@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sono&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <h1>SUDOKU</h1>
+            <div class="game-controls">
+                <div class="game-setup">
+                    <select name="difficulty" id="difficulty">
+                        <option value="Easy">Easy</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Hard">Hard</option>
+                    </select>
+                    <button id="gameStart">New Game</button>
+                </div>
+                <div class="timer">
+                    <div class="timeDisplay">
+                        <span id="minute">00</span> :
+                        <span id="second">00</span>
+                    </div>
+                    <div class="playpause">
+                        <button class="">
+                            <i class="fas fa-play-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="gameArea">
+                <div class="sudoku"></div>
+                <div class="values-buttons">
+                    <button id="clear">X</button>
+                    <button id="enter-1">1</button>
+                    <button id="enter-2">2</button>
+                    <button id="enter-3">3</button>
+                    <button id="enter-4">4</button>
+                    <button id="enter-5">5</button>
+                    <button id="enter-6">6</button>
+                    <button id="enter-7">7</button>
+                    <button id="enter-8">8</button>
+                    <button id="enter-9">9</button>
+                </div>
+            </div>
+        </div>
+        <div class="winMessage-box not-show">
+            <div class="message">
+                <h2>Modal Content</h2>
+                <button id="cross" class="fas fa-times cross"></button>
+            </div>
+        </div>
+    </div>
+    <script src="./JS/init.js"></script>
+    <script src="./JS/winMessageModal.js"></script>
+    <script src="./JS/mistakeCheck.js"></script>
+    <script src="./JS/assignButtons.js"></script>
+    <script src="./JS/timer.js"></script>
+    <script src="./JS/puzzleGenerator.js"></script>
+    <script src="./puzzleArrayCreator.js"></script>
+    <script src="./JS/app.js"></script>
+</body>
+</html>

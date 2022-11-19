@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container h1{
+    margin-bottom: 16px;
+    font-family:  'Sono', sans-serif;
+    letter-spacing: 2px;
+}
+.timer{
+    display: flex;
+    gap: 10px;
+    align-items: end;
+    height: 100%;
+}
+#minute, #second{
+    color: blue;
+    font-size: 22px;
+}
+.playpause button{
+    border:none;
+    background-color: transparent;
+    font-size: 22px;
+    color: #1a66a8;
+    cursor: pointer;
+}
+.game-controls{
+    width: 95%;
+    max-width: 488px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-right: 31px;
+}
+.game-setup{
+    width: 57%;
+    display: flex;
+    justify-content: space-between;
+    gap:5px;
+}
+.game-setup select, #gameStart{
+    width: 129px;
+    flex-shrink: 0;
+}
+.game-setup select{
+    padding: 6px;
+    font-size: 15px;
+    color:black;
+    border-radius: 8px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.game-setup #gameStart{
+    font-size: 15px;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #02050f;
+}
+.sudoku{
+    border: 3px solid black;
+    display: grid;
+    grid-template-columns: repeat(3,152px);
+    grid-template-rows: repeat(3,152px);
+    background-color: black;
+    column-gap: 3px;
+    row-gap:3px;
+    border-radius:5px ;
+}
+.block{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+.box{
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+.focused{
+    background-color: #cbe1f4;
+}
+.valid{
+    color:green;
+}
+.invalid{
+    color:red
+}
+.gameArea{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.values-buttons{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.values-buttons button{
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    color:black;
+    font-size: 17px;
+    border:none;
+    background-color: #4d99dda3;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.values-buttons button:hover{
+    background-color: #1a5f9da3;
+}
+.box:not(.given){
+    color: #1b0a95e6;
+}
+.mistake{
+    color: red !important;
+}
+/* modal */
+.winMessage-box{
+    background-color: #49a6e96b;
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    top:0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.message{
+    box-sizing: border-box;
+    text-align: center;
+    width:610px;
+    max-width: 90vw;
+    height: 175px;
+    background-color: white;
+    border-radius:10px;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.message h2{
+    color:hsl(209, 61%, 16%);
+}
+.cross{
+    position:absolute;
+    top:1rem;
+    right:1rem;
+    border:none;
+    background-color: transparent;
+    color:brown;
+    font-size: 22px;
+    cursor:pointer;
+    transition: all 0.3s linear;
+}
+.cross:hover{
+    transform: scale(1.5);
+    color:hsl(360, 71%, 66%);
+}
+.not-show{
+    display: none;
+}
+/*  */
+@media(max-width:578px){
+    .gameArea{
+        flex-direction: column;
+    }
+    .game-controls{
+        width: 391px;
+        transform: scale(86%);
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .values-buttons{
+        width: 317px;
+        margin-top: 40px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .sudoku{
+        border: 2px solid black;
+        grid-template-columns: repeat(3,112px);
+        grid-template-rows: repeat(3,112px);
+        column-gap: 2px;
+        row-gap:2px;
+    }
+}
