@@ -1,6 +1,6 @@
 # Sudoku
 
-Deployed Link: https://123sudo.netlify.app
+Deployed Link: https://123sudoku.netlify.app
 
 Classic sudoku game with 3 levels of difficulty (easy, medium, hard) and timer. 
 
